@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeNurture - Contact</title>
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Spruce and Sage Gradient Background */
+body {
+    background: linear-gradient(to bottom, #2a5d50, #9caf88);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: rgba(42, 93, 80, 0.9);
+    padding: 15px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    background-color: white;
+    color: #2a5d50;
+    border-radius: 5px;
+}
+
+/* Contact Section */
+.contact-section {
+    margin-top: 100px;
+    padding: 50px;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form label {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #2a5d50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: white;
+    color: #2a5d50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Social Media Icons */
+.social-icons {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    
+    <section class="contact-section">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Feel free to reach out through the form below.</p>
+        
+        <form class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <!-- Social Media Links -->
+<div class="social-icons">
+    <a href="https://www.facebook.com/share/15BFZsGK9J/" target="_blank">
+        <img src="img/fb.jpg" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/the_kristineee?igsh=MTZ2ejk2NXB4OWJuag==" target="_blank">
+        <img src="img/ig.jpg" alt="Instagram">
+    </a>
+    <a href="https://x.com/niatseirc?t=ZxYHA8YYUUhtNluRlYTkHA&s=09" target="_blank">
+        <img src="img/x.jpg" alt="X">
+    </a>
+    <a href="https://www.tiktok.com/@niatseirc?_t=ZS-8uVoS5iDMna&_r=1" target="_blank">
+        <img src="img/tiktok.jpg" alt="Tiktok">
+    </a>
+</div>
+
+</body>
+</html>

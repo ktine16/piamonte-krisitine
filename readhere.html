@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Here</title>
+    <style>
+ /* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #2a5d50, #9caf88);
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+/* Navigation Bar */
+nav {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 0;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f4d35e;
+}
+
+/* Container Styling */
+.read-here-container {
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Slider */
+.image-slider {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+
+
+/* Arrow Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="read-here-container" style="max-width: 900px; padding: 30px;">
+        <h1>Read Here</h1>
+        <div class="image-slider" style="height: 500px;">
+            <div class="slide active">
+                <img src="img/svt2.jpg" alt="Slide 1">
+                <div class="description">I am a fan of Seventeen since last year not because of their look but because of how they treat Carats(fandom name), how they don't care about their idol image for the happiness of Carats and becauseof their talents and music. </div>
+            </div>
+            <div class="slide">
+                <img src="img/bp4.jpg" alt="Slide 2">
+                <div class="description">I am a fan of Blackpink since 2019, I like their music and choreography and how savage they are.</div>
+            </div>
+            <div class="slide">
+                <img src="img/kdrama2.jpg" alt="Slide 3">
+                <div class="description">I've been watching k-drama since i was little. I started watching it in the ABS-CBN Asianovelas and because of it I still watch kdrama. My favorite k-drama is Business Proposal.</div>
+            </div>
+            <div class="slide">
+                <img src="img/au.jpg" alt="Slide 4">
+                <div class="description">I've been reading AU since 2023, what I love about AU is it has a different vibes when you read it, it has background music, images and you can relate on most of the stories.</div>
+            </div>
+            <div class="slide">
+                <img src="img/wattpad.jpg" alt="Slide 5">
+                <div class="description">I've been reading Wattpad since 2018. I have more than 60+ stories in my library. Wattpad made my english vocabulary wider than before.</div>
+            </div>
+
+            <!-- Arrow Buttons -->
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        
+    <script>
+         let currentIndex = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove("active");
+                if (i === index) slide.classList.add("active");
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        }
+    </script>
+</body>
+</html>

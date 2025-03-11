@@ -58,7 +58,7 @@ body {
     margin-top: 100px;
     padding: 50px;
     max-width: 600px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #2a5d50;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -123,6 +123,10 @@ body {
 .social-icons img:hover {
     transform: scale(1.2);
 }
+.counter {
+            font-size: 18px;
+            margin-top: 20px;
+        }
 
     </style>
 </head>
@@ -134,8 +138,8 @@ body {
     </nav>
     
     <section class="contact-section">
-        <h1>Contact Us</h1>
-        <p>We'd love to hear from you! Feel free to reach out through the form below.</p>
+        <h1>Contact Me</h1>
+        <p>I'd love to hear from you! Feel free to reach out through the form below.</p>
         
         <form class="contact-form">
             <label for="name">Name:</label>
@@ -153,17 +157,37 @@ body {
     <!-- Social Media Links -->
 <div class="social-icons">
     <a href="https://www.facebook.com/share/15BFZsGK9J/" target="_blank">
-        <img src="img - Copy/fb.jpg" alt="Facebook">
+        <img src="img/fb.jpg" alt="Facebook">
     </a>
     <a href="https://www.instagram.com/the_kristineee?igsh=MTZ2ejk2NXB4OWJuag==" target="_blank">
-        <img src="img - Copy/ig.jpg" alt="Instagram">
+        <img src="img/ig.jpg" alt="Instagram">
     </a>
     <a href="https://x.com/niatseirc?t=ZxYHA8YYUUhtNluRlYTkHA&s=09" target="_blank">
-        <img src="img - Copy/x.jpg" alt="X">
+        <img src="img/x.jpg" alt="X">
     </a>
     <a href="https://www.tiktok.com/@niatseirc?_t=ZS-8uVoS5iDMna&_r=1" target="_blank">
-        <img src="img - Copy/tiktok.jpg" alt="Tiktok">
+        <img src="img/tiktok.jpg" alt="Tiktok">
     </a>
+</div>
+<div>
+    <p class="counter">Views: <span id="viewCount">0</span></p>
+    <script>
+     // Retrieve the existing count (if any) from localStorage
+     let views = localStorage.getItem("pageViews");
+
+// If views exist, convert to a number and increase by 1
+if (views === null) {
+    views = 1; // First-time visitor
+} else {
+    views = parseInt(views) + 1; // Increment by 1
+}
+
+// Save updated views back to localStorage
+localStorage.setItem("pageViews", views);
+
+// Display the updated count
+document.getElementById("viewCount").textContent = views;
+ </script>
 </div>
 
 </body>
